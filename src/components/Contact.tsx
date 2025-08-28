@@ -26,14 +26,14 @@ const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!formData.firstName || !formData.lastName || !formData.email || !formData.phone || !formData.service) {
       toast.error("Please fill in all required fields");
       return;
     }
 
     setLoading(true);
-    
+
     try {
       const { error } = await supabase.functions.invoke('send-contact-email', {
         body: formData
@@ -66,7 +66,7 @@ const Contact = () => {
             Contact Us
           </h2>
           <p className="text-xl text-muted-foreground leading-relaxed">
-            We are based in Derby, East Midlands however we provide service nationwide. 
+            We are based in Derby, East Midlands however we provide service nationwide.
             We are happy to go into the busiest parts of major cities and also those small remote villages up in the district or by the sea sides.
           </p>
         </div>
@@ -87,47 +87,47 @@ const Contact = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
                   <div className="space-y-2">
                     <Label htmlFor="firstName">First Name *</Label>
-                    <Input 
-                      id="firstName" 
-                      placeholder="John" 
+                    <Input
+                      id="firstName"
+                      placeholder="John"
                       value={formData.firstName}
                       onChange={(e) => handleInputChange("firstName", e.target.value)}
-                      required 
+                      required
                     />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="lastName">Last Name *</Label>
-                    <Input 
-                      id="lastName" 
-                      placeholder="Smith" 
+                    <Input
+                      id="lastName"
+                      placeholder="Smith"
                       value={formData.lastName}
                       onChange={(e) => handleInputChange("lastName", e.target.value)}
-                      required 
+                      required
                     />
                   </div>
                 </div>
 
                 <div className="space-y-2 mb-6">
                   <Label htmlFor="email">Email *</Label>
-                  <Input 
-                    id="email" 
-                    type="email" 
-                    placeholder="john@company.com" 
+                  <Input
+                    id="email"
+                    type="email"
+                    placeholder="john@company.com"
                     value={formData.email}
                     onChange={(e) => handleInputChange("email", e.target.value)}
-                    required 
+                    required
                   />
                 </div>
 
                 <div className="space-y-2 mb-6">
                   <Label htmlFor="phone">Phone Number *</Label>
-                  <Input 
-                    id="phone" 
-                    type="tel" 
-                    placeholder="+44 7123 456789" 
+                  <Input
+                    id="phone"
+                    type="tel"
+                    placeholder="+44 7123 456789"
                     value={formData.phone}
                     onChange={(e) => handleInputChange("phone", e.target.value)}
-                    required 
+                    required
                   />
                 </div>
 
@@ -148,8 +148,8 @@ const Contact = () => {
 
                 <div className="space-y-2 mb-6">
                   <Label htmlFor="message">Additional Details</Label>
-                  <Textarea 
-                    id="message" 
+                  <Textarea
+                    id="message"
                     placeholder="Please provide details about your delivery requirements..."
                     className="min-h-[120px]"
                     value={formData.message}
@@ -157,7 +157,7 @@ const Contact = () => {
                   />
                 </div>
 
-                <Button 
+                <Button
                   type="submit"
                   disabled={loading}
                   className="w-full bg-logistics-blue hover:bg-logistics-blue-light text-white font-semibold py-3 text-lg rounded-lg transition-all duration-300 disabled:opacity-50"
@@ -193,10 +193,12 @@ const Contact = () => {
                   <div className="w-12 h-12 bg-logistics-orange rounded-full flex items-center justify-center mr-4">
                     <Mail className="h-6 w-6 text-white" />
                   </div>
-                  <div>
-                    <h3 className="font-semibold text-foreground mb-1">Email</h3>
-                    <p className="text-muted-foreground">Fleetory@outlook.com</p>
-                  </div>
+                  <a href="mailto:Fleetory@outlook.com">
+                    <div className="cursor-pointer">
+                      <h3 className="font-semibold text-foreground mb-1">Email</h3>
+                      <p className="text-muted-foreground">Fleetory@outlook.com</p>
+                    </div>
+                  </a>
                 </div>
               </Card>
 
@@ -205,17 +207,18 @@ const Contact = () => {
                   <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mr-4">
                     <MessageCircle className="h-6 w-6 text-white" />
                   </div>
-                  <div>
-                    <h3 className="font-semibold text-foreground mb-1">WhatsApp</h3>
-                    <a 
-                      href="https://wa.me/447352288232" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-muted-foreground hover:text-logistics-orange transition-colors duration-200"
-                    >
-                      Message us on WhatsApp
-                    </a>
-                  </div>
+                  <a
+  href="https://wa.me/447352288232"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="block"
+>
+  <div className="cursor-pointer hover:bg-gray-50 p-2 rounded-lg transition">
+    <h3 className="font-semibold text-foreground mb-1">WhatsApp</h3>
+    <p className="text-muted-foreground">+44 7352288232</p>
+  </div>
+</a>
+
                 </div>
               </Card>
             </div>
@@ -254,8 +257,8 @@ const Contact = () => {
               <div className="space-y-3">
                 <div className="flex items-center">
                   <div className="w-2 h-2 bg-logistics-orange rounded-full mr-3" />
-                  <a 
-                    href="/booking" 
+                  <a
+                    href="/booking"
                     className="text-muted-foreground hover:text-logistics-orange transition-colors duration-200 cursor-pointer"
                   >
                     Online web booking system
@@ -267,8 +270,8 @@ const Contact = () => {
                 </div>
                 <div className="flex items-center">
                   <div className="w-2 h-2 bg-logistics-orange rounded-full mr-3" />
-                  <a 
-                    href="mailto:fleetory@outlook.com" 
+                  <a
+                    href="mailto:fleetory@outlook.com"
                     className="text-muted-foreground hover:text-logistics-orange transition-colors duration-200 cursor-pointer"
                   >
                     Email booking
@@ -276,8 +279,8 @@ const Contact = () => {
                 </div>
                 <div className="flex items-center">
                   <div className="w-2 h-2 bg-logistics-orange rounded-full mr-3" />
-                  <a 
-                    href="tel:+447539868853" 
+                  <a
+                    href="tel:+447539868853"
                     className="text-muted-foreground hover:text-logistics-orange transition-colors duration-200 cursor-pointer"
                   >
                     Telephone support

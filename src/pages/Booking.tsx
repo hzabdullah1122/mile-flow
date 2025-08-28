@@ -309,9 +309,9 @@ const Booking = () => {
                 </p>
               </div>
 
-              <div className="grid md:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-24 justify-center">
                 {/* Create Account */}
-                <Card className="border-2 hover:border-primary transition-colors cursor-pointer group">
+                {/* <Card className="border-2 hover:border-primary transition-colors cursor-pointer group">
                   <CardContent className="p-6 text-center">
                     <div className="w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-full flex items-center justify-center group-hover:bg-blue-200 transition-colors">
                       <UserPlus className="w-8 h-8 text-blue-600" />
@@ -327,7 +327,7 @@ const Booking = () => {
                       Get Started
                     </Button>
                   </CardContent>
-                </Card>
+                </Card> */}
 
                 {/* Already Have Account */}
                 <Card className="border-2 hover:border-primary transition-colors cursor-pointer group">

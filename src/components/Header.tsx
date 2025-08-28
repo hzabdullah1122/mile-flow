@@ -62,7 +62,7 @@ const handleBookNow2 = () => {
             <img
               src="/lovable-uploads/a79e44cd-5cd8-4248-aa3a-3b2071208a15.png"
               alt="Fleetory Logo"
-              className="h-[6rem] w-auto"
+              className="h-[8rem] w-auto"
             />
           </a>
 
@@ -73,7 +73,7 @@ const handleBookNow2 = () => {
                 <NavigationMenuItem>
                   <NavigationMenuLink
                     href="/"
-                    className="text-foreground hover:text-logistics-blue transition-colors duration-200 font-medium px-3 py-2 text-sm"
+                    className="text-foreground hover:text-logistics-blue transition-colors duration-200 font-medium px-3 py-2 text-md"
                   >
                     Home
                   </NavigationMenuLink>
@@ -81,7 +81,7 @@ const handleBookNow2 = () => {
 
                 {/* Services Dropdown */}
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-foreground hover:text-logistics-blue transition-colors duration-200 font-medium bg-transparent px-3 py-2 text-sm">
+                  <NavigationMenuTrigger className="text-foreground hover:text-logistics-blue transition-colors duration-200 font-medium bg-transparent px-3 py-2 text-md">
                     Services
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
@@ -115,7 +115,7 @@ const handleBookNow2 = () => {
                 <NavigationMenuItem>
                   <NavigationMenuLink
                     href="/fleet"
-                    className="text-foreground hover:text-logistics-blue transition-colors duration-200 font-medium px-3 py-2 text-sm"
+                    className="text-foreground hover:text-logistics-blue transition-colors duration-200 font-medium px-3 py-2 text-md"
                   >
                     Our Fleet
                   </NavigationMenuLink>
@@ -124,7 +124,7 @@ const handleBookNow2 = () => {
                 <NavigationMenuItem>
                   <NavigationMenuLink
                     href="/about"
-                    className="text-foreground hover:text-logistics-blue transition-colors duration-200 font-medium px-3 py-2 text-sm"
+                    className="text-foreground hover:text-logistics-blue transition-colors duration-200 font-medium px-3 py-2 text-md"
                   >
                     About Us
                   </NavigationMenuLink>
@@ -133,7 +133,7 @@ const handleBookNow2 = () => {
                 <NavigationMenuItem>
                   <NavigationMenuLink
                     href="/contact"
-                    className="text-foreground hover:text-logistics-blue transition-colors duration-200 font-medium px-3 py-2 text-sm"
+                    className="text-foreground hover:text-logistics-blue transition-colors duration-200 font-medium px-3 py-2 text-md"
                   >
                     Contact Us
                   </NavigationMenuLink>
@@ -143,7 +143,7 @@ const handleBookNow2 = () => {
                 <NavigationMenuItem>
                   <NavigationMenuLink
                     onClick={handleBookNow}
-                    className="cursor-pointer text-foreground hover:text-logistics-blue transition-colors duration-200 font-medium px-3 py-2 text-sm"
+                    className="cursor-pointer text-foreground hover:text-logistics-blue transition-colors duration-200 font-medium px-3 py-2 text-md bg-[#ec7826]"
                   >
                     Book Now
                   </NavigationMenuLink>

@@ -34,7 +34,7 @@ const SameDayDelivery = () => {
               <Button 
                 size="lg"
                 variant="outline"
-                className="border-white text-white hover:bg-white hover:text-logistics-blue font-semibold px-8 py-4 text-lg"
+                className="border-white text-gray bg-transparent hover:bg-white hover:text-logistics-blue font-semibold px-8 py-4 text-lg"
               >
                 Call Now: 0800 123 4567
               </Button>
