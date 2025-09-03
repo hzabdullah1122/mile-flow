@@ -68,6 +68,7 @@ const Header = () => {
     setMobileMenuOpen(false);
   };
 
+  
   return (
     <header className="fixed top-0 left-0 right-0 z-50 h-[100px] bg-gradient-to-b from-white/95 via-white/80 to-white/60 backdrop-blur-md shadow">
       <div className="container mx-auto px-6">
