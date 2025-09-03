@@ -1,7 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Building2, Heart, Gavel, ShoppingBag, Wrench, Home } from "lucide-react";
 import { Link } from "react-router-dom";
-
+import { Button } from "./ui/button";
 const Industries = () => {
   const industries = [
     {
@@ -102,6 +102,15 @@ const Industries = () => {
           >
             Get Your Custom Quote
           </a>
+          <a href="tel:+447539868853">
+                <Button 
+                  size="lg"
+                  variant="outline"
+                  className="border-white text-black hover:bg-white hover:text-logistics-blue font-semibold px-8 py-4 text-lg"
+                >
+                  Speak to expert
+                </Button>
+              </a>
         </div>
       </div>
     </section>

@@ -1,4 +1,5 @@
 import { Phone, Mail, MapPin, MessageCircle } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -22,10 +23,23 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold">Services</h4>
             <ul className="space-y-2 text-white/80">
-              <li><a href="#services" className="hover:text-logistics-orange transition-colors duration-200">Standard Same Day Delivery</a></li>
-              <li><a href="#services" className="hover:text-logistics-orange transition-colors duration-200">Timed Delivery</a></li>
-              <li><a href="#services" className="hover:text-logistics-orange transition-colors duration-200">Heavy Haulage</a></li>
-              <li><a href="#services" className="hover:text-logistics-orange transition-colors duration-200">Bespoke Logistics Solutions</a></li>
+              <li>
+                <Link 
+                  to="/services/same-day-delivery" 
+                  className="hover:text-logistics-orange transition-colors duration-200"
+                >
+                  Standard Same Day Delivery
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/services/timed-delivery" 
+                  className="hover:text-logistics-orange transition-colors duration-200"
+                >
+                  Timed Delivery
+                </Link>
+              </li>
+              
             </ul>
           </div>
 
@@ -33,11 +47,11 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold">Quick Links</h4>
             <ul className="space-y-2 text-white/80">
-              <li><a href="/fleet" className="hover:text-logistics-orange transition-colors duration-200">Fleet</a></li>
-              <li><a href="/industries" className="hover:text-logistics-orange transition-colors duration-200">Industries</a></li>
-              <li><a href="/about" className="hover:text-logistics-orange transition-colors duration-200">About Us</a></li>
-              <li><a href="/booking" className="hover:text-logistics-orange transition-colors duration-200">Get Quote</a></li>
-              <li><a href="/contact" className="hover:text-logistics-orange transition-colors duration-200">Contact</a></li>
+              <li><Link to="/fleet" className="hover:text-logistics-orange transition-colors duration-200">Fleet</Link></li>
+              <li><Link to="/industries" className="hover:text-logistics-orange transition-colors duration-200">Industries</Link></li>
+              <li><Link to="/about" className="hover:text-logistics-orange transition-colors duration-200">About Us</Link></li>
+              <li><Link to="/booking" className="hover:text-logistics-orange transition-colors duration-200">Get Quote</Link></li>
+              <li><Link to="/contact" className="hover:text-logistics-orange transition-colors duration-200">Contact</Link></li>
             </ul>
           </div>
 
@@ -48,8 +62,16 @@ const Footer = () => {
               <div className="flex items-center space-x-3 mb-3">
                 <Phone className="h-5 w-5 text-logistics-orange flex-shrink-0" />
                 <div className="text-white/80">
-                  <div>+44 7539868853</div>
-                  <div>+44 7352288232</div>
+                  <div>
+                      <a href="tel:+447539868853" className="hover:text-logistics-orange">
+                        +44 7539868853
+                      </a>
+                    </div>
+                    <div>
+                      <a href="tel:+447352288232" className="hover:text-logistics-orange">
+                        +44 7352288232
+                      </a>
+                    </div>
                 </div>
               </div>
               <div className="flex items-center space-x-3 mb-3">
@@ -89,6 +111,21 @@ const Footer = () => {
               <a href="#" className="hover:text-logistics-orange transition-colors duration-200">Terms of Service</a>
               <a href="#" className="hover:text-logistics-orange transition-colors duration-200">Cookie Policy</a>
             </div>
+          </div>
+          
+          {/* Developer Credit */}
+          <div className="text-center mt-6 pt-6 border-t border-white/10">
+            <p className="text-white/40 text-sm">
+              Developed by{" "}
+              <a 
+                href="https://webcraftio.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-logistics-orange hover:text-logistics-orange-light transition-colors duration-200"
+              >
+                WebCraftio
+              </a>
+            </p>
           </div>
         </div>
       </div>

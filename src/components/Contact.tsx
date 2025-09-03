@@ -61,15 +61,7 @@ const Contact = () => {
   return (
     <section className="py-20 bg-background" id="contact">
       <div className="container mx-auto px-6">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Contact Us
-          </h2>
-          <p className="text-xl text-muted-foreground leading-relaxed">
-            We are based in Derby, East Midlands however we provide service nationwide.
-            We are happy to go into the busiest parts of major cities and also those small remote villages up in the district or by the sea sides.
-          </p>
-        </div>
+        
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}
@@ -180,9 +172,16 @@ const Contact = () => {
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Phone & WhatsApp</h3>
                     <div className="text-muted-foreground space-y-1">
-                      <div>+44 7539868853</div>
-                      <div>+44 7352288232</div>
-                      <div className="text-sm text-logistics-orange font-medium">Emergency: +44 7539868853</div>
+                      <div>
+                        <a href="tel:+447539868853">+44 7539868853</a>
+                      </div>
+                      <div>
+                        <a href="tel:+447352288232">+44 7352288232</a>
+                      </div>
+
+                      <div className="text-sm text-logistics-orange font-medium">
+                        Emergency: <a href="tel:+447539868853" className="text-logistics-orange">+44 7539868853</a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -246,7 +245,9 @@ const Contact = () => {
                 </div>
                 <div className="flex justify-between">
                   <span>Out Of Hours:</span>
-                  <span className="font-semibold text-logistics-orange">+44 7539868853</span>
+                  <a href="tel:+447539868853" className="font-semibold text-logistics-orange">
+                    +44 7539868853
+                  </a>
                 </div>
               </div>
             </Card>
